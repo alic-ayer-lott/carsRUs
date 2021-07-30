@@ -5,8 +5,8 @@ const paintColors = getPaintColors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "interior") {
-            window.alert(`User chose interior ${event.target.value}`)
+        if (event.target.name === "paintColor") {
+            window.alert(`User chose paint color ${event.target.id}`)
         }
     }
 )
@@ -17,7 +17,9 @@ export const paintColorChoices = () => {
     let html = "<ul>"
 
     const paintColorHTMLArray = allPaintColors.map((paintColorObject) => {
-            return `<li>${paintColorObject.color}</li>`;
+            return `<li>
+            <input type="radio" name="paintColor" value="${paintColorObject.id}"/>${paintColorObject.color}
+            </li>`;
         });
 
     html += paintColorHTMLArray.join("")

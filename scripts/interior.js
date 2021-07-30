@@ -17,7 +17,9 @@ export const interiorChoices = () => {
     let html = "<ul>"
 
     const interiorHTMLArray = allInteriors.map((interiorObject) => {
-            return `<li>${interiorObject.fabric}</li>`;
+            return `<li>
+            <input type="radio" name="interior" value="${interiorObject.id}"/>${interiorObject.fabric}
+            </li>`;
         });
 
     html += interiorHTMLArray.join("")
