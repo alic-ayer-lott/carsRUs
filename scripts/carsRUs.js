@@ -1,8 +1,7 @@
 import { interiorChoices } from "./interior.js"
 import { paintColorChoices } from "./paintColor.js"
 import { technologyChoices } from "./technology.js"
-
-// import { wheels } from "./wheel.js"
+import { wheelChoices } from "./wheel.js"
 
 export const carsRUs = () => {
     return `
@@ -23,7 +22,7 @@ export const carsRUs = () => {
             </section>
             <section class="choices__wheel options">
             <h2>Wheels</h2>
-            
+                ${wheelChoices()}
         </section>
         </article>
 
