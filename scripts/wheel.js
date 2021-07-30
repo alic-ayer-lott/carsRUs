@@ -5,8 +5,8 @@ const wheels = getWheels()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "wheels") {
-            window.alert(`User chose interior ${event.target.value}`)
+        if (event.target.name === "wheel") {
+            window.alert(`User chose wheel ${event.target.value}`)
         }
     }
 )
@@ -17,7 +17,9 @@ export const wheelChoices = () => {
     let html = "<ul>"
 
     const wheelHTMLArray = allWheels.map((wheelObject) => {
-            return `<li>${wheelObject.wheel}</li>`;
+            return `<li>
+            <input type="radio" name="wheel" value="${wheelObject.id}"/>${wheelObject.wheel}
+            </li>`;
         });
 
     html += wheelHTMLArray.join("")

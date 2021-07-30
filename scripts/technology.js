@@ -5,8 +5,8 @@ const technologies = getTechnologies()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "interior") {
-            window.alert(`User chose interior ${event.target.value}`)
+        if (event.target.name === "technology") {
+            window.alert(`User chose package ${event.target.value}`)
         }
     }
 )
@@ -17,7 +17,9 @@ export const technologyChoices = () => {
     let html = "<ul>"
 
     const technologyHTMLArray = allTechnologies.map((technologyObject) => {
-            return `<li>${technologyObject.package}</li>`;
+            return `<li>
+            <input type="radio" name="technology" value="${technologyObject.id}"/>${technologyObject.package}
+            </li>`;
         });
 
     html += technologyHTMLArray.join("")
