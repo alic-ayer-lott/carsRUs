@@ -9,11 +9,11 @@ export const carsRUs = () => {
 
         <article class="choices">
             <section class="choices__paintColor options">
-                <h2>Paint Color</h2>
+                <h2>Paint Colors</h2>
                ${paintColorChoices()}
             </section>
             <section class="choices__interior options">
-                <h2>Interior</h2>
+                <h2>Interiors</h2>
                 ${interiorChoices()}
             </section>
             <section class="choices__technology options">
