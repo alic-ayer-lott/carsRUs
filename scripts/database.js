@@ -22,7 +22,10 @@ const database = {
         { id: 2, wheel: "17-inch Pair Radial Black", price: 550 },
         { id: 3, wheel: "18-inch Pair Spoke Silver", price: 650 },
         { id: 4, wheel: "18-inch Pair Spoke Black", price: 800 }
-    ]
+    ],
+    customOrder: [
+    ],
+    orderBuilder: {},
 }
 
 export const getPaintColors = () => {
@@ -39,4 +42,39 @@ export const getTechnologies = () => {
 
 export const getWheels = () => {
     return database.wheels.map(wheel => ({...wheel}))
+}
+
+export const getOrders = () => {
+    return database.customOrders.map(order => ({...order}))
+}
+
+export const setPaintColor = (id) => {
+    database.orderBuilder.paintColorId = id
+}
+
+export const setInterior = (id) => {
+    database.orderBuilder.interiorId = id
+}
+
+export const setTechnology = (id) => {
+    database.orderBuilder.technologyId = id
+}
+
+export const setWheel = (id) => {
+    database.orderBuilder.wheelId = id
+}
+
+export const addCustomOrder = () => {
+    const newOrder = {...database.orderBuilder}
+
+    const lastIndex = database.customOrders.length - 1
+    newOrder.id = database.customOrders[lastIndex].id + 1
+
+    newOrder.timestamp = Date.now()
+
+    database.customOrders.push(newOrder)
+
+    database.orderBuilder = {}
+
+    document.dispatchEvent(new CustomEvent("stateChanged"))
 }

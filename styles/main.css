@@ -6,3 +6,15 @@ ul {
     padding-inline-start: 0.25rem;
 }
 
+body {
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#orderButton {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color:;
+    color:;
+    font-size: 1rem;
+}
