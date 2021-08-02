@@ -9,12 +9,15 @@ ul {
 body {
     font-family: 'Comfortaa', cursive;
     font-family: 'Quicksand', sans-serif;
+    color: #053c5e;
+    background-color: #c0c0c0;
 }
 
 #orderButton {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color:;
-    color:;
+    background-color:#f28f3b;
+    color:#1b263b;
     font-size: 1rem;
 }
+
