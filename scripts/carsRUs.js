@@ -37,7 +37,7 @@ export const carsRUs = () => {
         </section>
         </article>
 
-        <article>
+        <article class="button">
             <button id="orderButton">Create Custom Order</button>
         </article>
 

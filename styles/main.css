@@ -14,10 +14,10 @@ body {
 }
 
 #orderButton {
-    margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
     background-color:#f28f3b;
     color:#1b263b;
     font-size: 1rem;
+    margin: 1rem 0rem;
 }
 
